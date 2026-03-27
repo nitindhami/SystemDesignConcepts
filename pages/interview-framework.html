@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Framework | System Design Mastery</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+<header class="navbar"><div class="container nav-wrap"><a class="brand" href="../index.html">System Design Mastery</a><nav class="nav-links"><a href="../index.html">Home</a><a href="roadmap.html">Roadmap</a><a href="learning-paths.html">Learning Paths</a><a href="glossary.html">Glossary</a><a href="interview-framework.html">Interview Framework</a><a href="checklist.html">Revision Checklist</a></nav><button id="themeToggle" class="btn icon">🌙</button></div></header>
+<main class="container section">
+  <h1>System Design Interview Framework</h1>
+  <div class="card">
+    <ol>
+      <li><strong>Clarify scope:</strong> confirm core users, must-have features, and constraints.</li>
+      <li><strong>Estimate:</strong> request volume, storage growth, read/write split, latency goals.</li>
+      <li><strong>Sketch architecture:</strong> API, services, databases, caches, queues.</li>
+      <li><strong>Deep dive:</strong> data model, bottlenecks, failure handling, consistency.</li>
+      <li><strong>Tradeoffs:</strong> explain alternatives and why you made each choice.</li>
+      <li><strong>Close strong:</strong> summarize design, risks, and next optimization steps.</li>
+    </ol>
+  </div>
+
+  <section class="card" style="margin-top:1rem;">
+    <h2>Pattern Chooser (Quick Interview Guide)</h2>
+    <ul>
+      <li><strong>Strategy:</strong> interchangeable business rules (pricing, ranking).</li>
+      <li><strong>Observer:</strong> one event updates multiple subscribers.</li>
+      <li><strong>Factory:</strong> object creation hidden behind interfaces.</li>
+      <li><strong>Command:</strong> queueing/retrying actions with auditability.</li>
+      <li><strong>Proxy:</strong> add caching, access control, or lazy loading in front of core object.</li>
+    </ul>
+  </section>
+
+  <section class="card" style="margin-top:1rem;">
+    <h2>Common Mistakes in Interviews</h2>
+    <ul>
+      <li>Jumping to components before requirements are clear.</li>
+      <li>Choosing tools by brand name instead of workload patterns.</li>
+      <li>Ignoring non-functional goals like reliability and operability.</li>
+      <li>Not discussing failure modes, retries, and observability.</li>
+      <li>Over-detailing one area while neglecting end-to-end flow.</li>
+    </ul>
+  </section>
+
+  <section class="card" style="margin-top:1rem;">
+    <h2>How to Think Like an Interviewer</h2>
+    <p>Interviewers look for structure, pragmatic decisions, clear assumptions, and ability to adapt when constraints change.</p>
+  </section>
+</main>
+<footer><div class="container">Cheat sheet: communicate tradeoffs and failure handling, not just happy-path architecture.</div></footer>
+<script src="../data/topics.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

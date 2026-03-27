@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="System Design learning portal from beginner to interview-ready level." />
+  <title>System Design Mastery Portal</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">System Design Mastery</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="pages/roadmap.html">Roadmap</a>
+        <a href="pages/learning-paths.html">Learning Paths</a>
+        <a href="pages/glossary.html">Glossary</a>
+        <a href="pages/interview-framework.html">Interview Framework</a>
+        <a href="pages/checklist.html">Revision Checklist</a>
+      </nav>
+      <div class="nav-actions">
+        <span id="studyStreak" class="badge">1 day streak</span>
+        <button id="themeToggle" class="btn icon" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card">
+          <h1>Master System Design: From Foundations to Scalable Architectures</h1>
+          <p>
+            A practical, interview-focused roadmap for developers who want confidence in both LLD and HLD.
+            Learn the fundamentals, apply them in case studies, and train with real design prompts used in top interviews.
+          </p>
+          <p class="muted">Best for beginners, service-company prep, product-company prep, and big-tech interview loops.</p>
+          <a class="btn primary" href="#topics">Start Learning</a>
+        </div>
+        <aside class="card" aria-label="Progress dashboard">
+          <h2>Progress Dashboard</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><strong id="progressPercent">0%</strong><span>Completion</span></div>
+            <div class="kpi"><strong id="favoriteCount">0</strong><span>Favorites</span></div>
+          </div>
+          <p id="progressCount" class="muted">0/0 completed</p>
+          <div class="progress-bar" aria-label="completion progress"><div class="progress-fill" id="progressFill"></div></div>
+          <p><strong>Next Recommended Topic:</strong> <span id="nextTopic">Loading...</span></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="paths">
+      <div class="container">
+        <h2>Choose Your Learning Path</h2>
+        <p class="muted">Compare the recommended order for Beginner, Service Company, Product Company, and Big Tech interview preparation.</p>
+        <div id="pathTabs" class="path-tabs" role="tablist" aria-label="Learning paths"></div>
+        <div id="pathDetails"></div>
+      </div>
+    </section>
+
+    <section class="section" id="topics">
+      <div class="container">
+        <h2>Topic Explorer</h2>
+        <p class="muted">Search, filter, favorite, and mark modules as done. Every card includes quick interview reflection prompts.</p>
+        <div class="controls">
+          <input id="searchInput" type="search" placeholder="Search by keyword, e.g. sharding, UML, queue" aria-label="Search topics" />
+          <select id="difficultyFilter" aria-label="Filter by difficulty">
+            <option>All</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option>
+          </select>
+          <select id="moduleFilter" aria-label="Filter by module">
+            <option>All</option><option>Foundations</option><option>LLD</option><option>Patterns</option><option>Case Studies</option><option>HLD</option><option>Data</option><option>Performance</option><option>Distributed Systems</option><option>Interview</option>
+          </select>
+          <select id="tagFilter" aria-label="Filter by interview tag">
+            <option>All</option><option>LLD</option><option>HLD</option><option>Product Interview</option><option>Service Interview</option><option>Big Tech</option><option>Backend</option><option>Scalability</option>
+          </select>
+        </div>
+        <div class="topics-grid" id="topicsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <h2>Architecture Building Blocks</h2>
+        <p class="muted">Use this mini map as a mental model when designing systems under time pressure.</p>
+        <svg class="mini-arch" viewBox="0 0 600 180" role="img" aria-label="basic architecture diagram">
+          <rect x="10" y="60" width="90" height="50" rx="8" fill="none" stroke="currentColor"/>
+          <text x="30" y="90" fill="currentColor">Client</text>
+          <rect x="140" y="60" width="110" height="50" rx="8" fill="none" stroke="currentColor"/>
+          <text x="158" y="90" fill="currentColor">API Gateway</text>
+          <rect x="290" y="20" width="110" height="50" rx="8" fill="none" stroke="currentColor"/>
+          <text x="317" y="50" fill="currentColor">Service A</text>
+          <rect x="290" y="100" width="110" height="50" rx="8" fill="none" stroke="currentColor"/>
+          <text x="317" y="130" fill="currentColor">Service B</text>
+          <rect x="450" y="20" width="120" height="50" rx="8" fill="none" stroke="currentColor"/>
+          <text x="486" y="50" fill="currentColor">Cache</text>
+          <rect x="450" y="100" width="120" height="50" rx="8" fill="none" stroke="currentColor"/>
+          <text x="486" y="130" fill="currentColor">Database</text>
+          <line x1="100" y1="85" x2="140" y2="85" stroke="currentColor"/>
+          <line x1="250" y1="85" x2="290" y2="45" stroke="currentColor"/>
+          <line x1="250" y1="85" x2="290" y2="125" stroke="currentColor"/>
+          <line x1="400" y1="45" x2="450" y2="45" stroke="currentColor"/>
+          <line x1="400" y1="125" x2="450" y2="125" stroke="currentColor"/>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Built with plain HTML, CSS, and JavaScript for fast GitHub Pages deployment. Extend modules via <code>data/topics.js</code>.</p>
+    </div>
+  </footer>
+
+  <script src="data/topics.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
